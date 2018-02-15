@@ -3192,10 +3192,10 @@ if (typeof jQuery !== 'undefined' && jQuery !== null) {
   };
 }
 
-if (typeof module !== 'undefined' && module !== null) {
+if (typeof window !== "undefined" && window !== null) {
+    window.Dropzone = Dropzone;
+} else if (typeof module !== "undefined" && module !== null) {
   module.exports = Dropzone;
-} else {
-  window.Dropzone = Dropzone;
 }
 
 // Dropzone file status codes
